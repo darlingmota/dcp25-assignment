@@ -52,3 +52,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def parse_abc_file(path, book_number, file_name):
