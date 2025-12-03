@@ -1,1 +1,1 @@
-print("test")
+print("if you see this, program is running")
