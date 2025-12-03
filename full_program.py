@@ -50,7 +50,7 @@ def main():
     abc_files = find_abc_files()
     print("found", len(abc_files), "abc files")
 
+def parse_abc_file(path, book_number, file_name):
+
 if __name__ == "__main__":
     main()
-
-def parse_abc_file(path, book_number, file_name):
