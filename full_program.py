@@ -22,3 +22,8 @@ def create_table(conn):
         )
     """)
     conn.commit()
+
+def clear_table(conn):
+    cur = conn.cursor()
+    cur.execute("delete from tunes")
+    conn.commit()
