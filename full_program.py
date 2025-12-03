@@ -54,6 +54,10 @@ def parse_abc_file(path, book_number, file_name):
     tunes = []
     current = None
     body_lines = []
+    
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            text = line.strip()
 
 if __name__ == "__main__":
     main()
