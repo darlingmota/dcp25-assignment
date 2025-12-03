@@ -3,8 +3,7 @@ import sqlite3
 import pandas as pd
 
 def get_connection(db_path="tunes.db"):
-    conn = sqlite3.connect(db_path)
-    return conn
+    return sqlite3.connect(db_path)
 
 
 def create_table(conn):
@@ -23,17 +22,3 @@ def create_table(conn):
         )
     """)
     conn.commit()
-
-
-def clear_table(conn):
-    cur = conn.cursor()
-    cur.execute("delete from tunes")
-    conn.commit()
-
-def main():
-    conn = get_connection()
-    create_table(conn)
-    print("database ready")
-
-if __name__ == "__main__":
-    main()
