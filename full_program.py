@@ -49,3 +49,6 @@ def main():
 
     abc_files = find_abc_files()
     print("found", len(abc_files), "abc files")
+
+if __name__ == "__main__":
+    main()
