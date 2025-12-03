@@ -47,5 +47,5 @@ def main():
     conn = get_connection()
     create_table(conn)
 
-abc_files = find_abc_files()
+    abc_files = find_abc_files()
     print("found", len(abc_files), "abc files")
