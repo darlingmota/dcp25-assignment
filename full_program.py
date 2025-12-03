@@ -27,3 +27,19 @@ def clear_table(conn):
     cur = conn.cursor()
     cur.execute("delete from tunes")
     conn.commit()
+
+def find_abc_files(root="abc_books"):
+    files = []
+    for path, folders, filelist in os.walk(root):
+        folder_name = os.path.basename(path)
+        if folder_name.isdigit():
+            book_number = int(folder_name)
+            for f in filelist:
+                if f.endswith(".abc"):
+                    full_path = os.path.join(path, f)
+                    files.append({
+                        "book": book_number,
+                        "path": full_path,
+                        "file_name": f
+                    })
+    return files
