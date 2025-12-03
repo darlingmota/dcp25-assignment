@@ -43,3 +43,9 @@ def find_abc_files(root="abc_books"):
                         "file_name": f
                     })
     return files
+def main():
+    conn = get_connection()
+    create_table(conn)
+
+abc_files = find_abc_files()
+    print("found", len(abc_files), "abc files")
