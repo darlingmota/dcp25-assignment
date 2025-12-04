@@ -88,9 +88,9 @@ This assignment taiught me how to parse real world text formats and work with ma
 
 
 # References
-* **Duggan, B. (2025)** *Tkinter GUI Programming: A Comprehensive Guide to Python's built-in GUI Library. Available at: [Tkinter Slides By Bryan](https://github.com/skooter500/dcp25/blob/main/week4/tkinter_slides.pdf)* **TU Dublin**
-* **Hunter, J.D. et al. (2025)** Matplotlib: Visualization with Python. Available at: https://matplotlib.org/stable/
-* 
+* **Duggan, B. (2025)** *Tkinter GUI Programming: A Comprehensive Guide to Python's built-in GUI Library. Available at: [Tkinter Slides By Dr. Bryan Duggan](https://github.com/skooter500/dcp25/blob/main/week4/tkinter_slides.pdf)* **TU Dublin**
+* **Hunter, J.D. et al. (2025)** *Matplotlib: Visualization with Python. Available at: [Tutorials](https://matplotlib.org/stable/tutorials/images.html#sphx-glr-tutorials-images-py)*
+* **Duggan, B. (2025)** *Introduction to Matplotlib: Data Visualization. Available at: [Matplotlib Slides By Dr. Bryan Duggan](https://github.com/skooter500/dcp25/blob/main/week4/tkinter_slides.pdf)* **TU Dublin**
 * 
 * 
 * 
