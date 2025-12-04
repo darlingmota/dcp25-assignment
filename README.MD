@@ -7,7 +7,7 @@
 
 - Module: Data Centric Programming
 
-**Lecturered by** *Dr. Bryan Duggan, Computer Scientist*
+**Lecturered & Mentored by** *Dr. Bryan Duggan, Computer Scientist*
 
 # Screenshots
 ![GUI Screenshot](images/Screenshot%202025-12-04%20at%2013.53.07.png)
