@@ -82,13 +82,13 @@ I like the GUI I created.
 ![GUI Screenshot](images/Screenshot%202025-12-04%20at%2013.53.07.png)
  It's overall just user friendly and sleek and works perfectly with the databaase and analysis features underneath. Adding the analysis charts into the GUI really made the project feel more complete and gives the user a sense of variety and understand some facts
 
- '''Python
+ ```Python
  def field(label):  # helper function to create labeled entry field
     tk.Label(sidebar, text=label, bg=PANEL, fg=TEXT, font=FONT).pack(anchor="w", padx=20)  # creates label
     entry = tk.Entry(sidebar, font=FONT, bg="#1A1A1A", fg="white", relief="flat", insertbackground="white", highlightthickness=2, highlightbackground="#333333", highlightcolor="#555555")  # creates entry box
     entry.pack(fill="x", padx=20, pady=5)  # packs entry
     return entry  # returns entry
-'''
+```
 
 # What I learned
 
