@@ -92,6 +92,7 @@ def parse_abc_file(path, book_number, file_name):
     if current:
         current["abc_text"] = "\n".join(body_lines)
         tunes.append(current)
+    return tunes
 
 if __name__ == "__main__":
     main()
