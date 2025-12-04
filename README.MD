@@ -7,7 +7,6 @@ Name: Darling Mota
 Student Number: C24486262
 
 # List of files in the project
-# List of files in the project
 
 | File / Folder | Source / Description |
 |---------------|----------------------|
