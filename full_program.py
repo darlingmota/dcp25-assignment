@@ -78,6 +78,7 @@ def parse_abc_file(path, book_number, file_name):
                 }
                 body_lines = []
             elif currnener:
+            elif current:
 
 
 if __name__ == "__main__":
