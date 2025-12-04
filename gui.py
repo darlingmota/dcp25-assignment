@@ -4,7 +4,8 @@ from PIL import Image, ImageTk
 from full_program import(
     get_connection, create_table, load_all_tunes,
     load_dataframe, get_tunes_by_book,
-    get_tunes_by_type, search_tunes
+    get_tunes_by_type, search_tunes,
+    plot_tunes_per_book, plot_most_common_keys
 )
 
 conn = get_connection()
@@ -15,7 +16,7 @@ df = load_dataframe(conn)
 
 root = tk.Tk()
 root.title("ABC Tunes Explorer")
-root.geometry("1050x700")
+root.geometry("1050x800")
 root.configure(bg="#121212")
 
 logo_img = Image.open("images/headerImage.png")
@@ -74,9 +75,8 @@ subtitle = tk.Label(
 )
 subtitle.pack(pady=0)
 
-sidebar = tk.Frame(root, bg=PANEL, width=260, height=700)
+sidebar = tk.Frame(root, bg=PANEL, width=260)
 sidebar.pack(side="left", fill="y")
-sidebar.pack_propagate(False)
 
 tk.Label(
     sidebar,
@@ -120,6 +120,18 @@ modern_button(sidebar, "Search by Title", do_title).pack(fill="x", padx=20, pady
 
 tk.Label(sidebar, bg=PANEL).pack(pady=10) 
 modern_button(sidebar, "Reload Database", do_reload).pack(fill="x", padx=20, pady=12)
+
+tk.Label(sidebar, text="Analysis", bg=PANEL, fg="white",
+         font=("Inter", 14, "bold")).pack(pady=10)
+
+def do_plot_books():
+    plot_tunes_per_book(df)
+
+def do_plot_keys():
+    plot_most_common_keys(df)
+
+modern_button(sidebar, "Plot Tunes Per Book", do_plot_books).pack(fill="x", padx=20, pady=12)
+modern_button(sidebar, "Plot Most Common Keys", do_plot_keys).pack(fill="x", padx=20, pady=12)
 
 
 table_frame = tk.Frame(root, bg=BG)
