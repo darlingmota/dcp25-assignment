@@ -2,7 +2,9 @@
 
 
 Name: Darling Mota
+
 Student Number: C24486262
+
 Module: Data Centric Programming
 
 # List of files in the project
