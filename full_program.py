@@ -94,6 +94,15 @@ def parse_abc_file(path, book_number, file_name):
         tunes.append(current)
     return tunes
 
+def main():
+    conn = get_connection()
+    create_table(conn)
+
+    abc_files = find_abc_files()
+
+    for item in abc_files:
+        tunes = parse_abc_file(item["path"], item["book"], item["file_name"])
+        print(item["file_name"], "→", len(tunes), "tunes parsed")
 
 if __name__ == "__main__":
     main()
