@@ -23,3 +23,12 @@ logo_img = logo_img.resize((300, 180))
 logo_img = ImageTk.PhotoImage(logo_img)
 logo_label = tk.Label(root, image=logo_img, bg="#121212")
 logo_label.pack(pady=10)
+
+
+ACCENT = "white"
+BG = "#121212"
+PANEL = "#1C1C1C"
+TEXT = "#EAEAEA"
+FONT = ("Inter", 11)
+FONT_BOLD = ("Inter", 12, "bold")
+TITLE_FONT = ("Inter", 22, "bold")
