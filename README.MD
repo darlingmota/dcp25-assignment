@@ -7,18 +7,19 @@ Name: Darling Mota
 Student Number: C24486262
 
 # List of files in the project
-| Files | Source |
-|-----------|-----------|
-| full_prograam.py | Self written |
-| gui.py | Self written |
+# List of files in the project
+
+| File / Folder | Source / Description |
+|---------------|----------------------|
+| full_program.py | Self written backend |
+| gui.py | Self-written |
 | assignment.md | Assignment brief |
-| abc_files | Assignment brief |
-| .gitignore | From [reference]() |
-| LICENSE | From [reference]() |
-| README.MD | From [reference]() |
-| tempCodeRunnerFile.py | From [reference]() |
-| tunes.db | From [reference]() |
-| Images | From [images]() |
+| abc_books/ | Files provided in assignment |
+| images/headerImage.png | GUI header image |
+| tunes.db | SQLite database |
+| README.md | Project documentation |
+| .gitignore | Ignore |
+| LICENSE | Permissions |
 
 # Description of the project
 
