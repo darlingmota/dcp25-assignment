@@ -1,11 +1,11 @@
 # Music Analysis, GUI Application & Database Processing Project 2025
 
 
-Name: Darling Mota
+- Name: Darling Mota
 
-Student Number: C24486262
+- Student Number: C24486262
 
-Module: Data Centric Programming
+- Module: Data Centric Programming
 
 Lecturer: Dr. Bryan Duggan
 
