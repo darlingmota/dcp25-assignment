@@ -10,8 +10,15 @@ Student Number: C24486262
 | Files | Source |
 |-----------|-----------|
 | full_prograam.py | Self written |
-| gui.py | Modified from [reference]() |
-| test.py | From [reference]() |
+| gui.py | Self written |
+| assignment.md | Assignment brief |
+| abc_files | Assignment brief |
+| .gitignore | From [reference]() |
+| LICENSE | From [reference]() |
+| README.MD | From [reference]() |
+| tempCodeRunnerFile.py | From [reference]() |
+| tunes.db | From [reference]() |
+| Images | From [images]() |
 
 # Description of the project
 
