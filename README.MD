@@ -11,20 +11,22 @@ Student Number: C24486262
 I wrote a parser that reads multiple folders of ABC files which in turn identifies each tune inside them and uses that information to insert every tune into a database for analysis.
 
 # Screenshots
-![](images/Screenshot 2025-12-04 13.53.07.png)
-
 
 
 # Instructions for use
 
 # How it works:
+Extracting tune metadata line by line and store the result in a dictionary.
+When tunes are identified they get inserted into a database with the book number. The program loads the sotred data into Pandas for analysis.
+
+The GUI is a layer on top of the system to perform search and plot data. 
 
 # List of files in the project
 
 | Files | Source |
 |-----------|-----------|
-| main.py | Self written |
-| test.py | Modified from [reference]() |
+| full_prograam.py | Self written |
+| gui.py | Modified from [reference]() |
 | test.py | From [reference]() |
 
 # References
@@ -33,7 +35,7 @@ I wrote a parser that reads multiple folders of ABC files which in turn identifi
 
 # What I am most proud of in the assignment
 
-Bla bla bla
+Storing hundreds of tunes 
 
 # What I learned
 
