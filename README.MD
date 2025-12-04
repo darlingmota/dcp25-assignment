@@ -6,9 +6,12 @@ Name: Darling Mota
 
 Student Number: C24486262
 
-# Screenshots
-
 # Description of the project
+
+I wrote a parser that reads muultople folders of ABC files which in turn identifies each tune inside them use that information to insert every tune into a database for analysis
+
+
+# Screenshots
 
 # Instructions for use
 
