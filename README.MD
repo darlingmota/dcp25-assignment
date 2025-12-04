@@ -89,6 +89,7 @@ I like the GUI I created.
     entry.pack(fill="x", padx=20, pady=5)  # packs entry
     return entry  # returns entry
 ```
+Creating the search fields in the sidebar was a cool part of the project because when testing you can know the difference of reliability compared to a CLI which looks very outdated if a user were to use that. The user is able to just move a curser and type whatever suited key to understand and learn the data.  
 
 # What I learned
 
