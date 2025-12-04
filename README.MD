@@ -7,7 +7,7 @@
 
 - Module: Data Centric Programming
 
-Lecturer: Dr. Bryan Duggan, Computer Scientist
+Lecturered by Dr. Bryan Duggan, Computer Scientist
 
 # List of files in the project
 
@@ -32,7 +32,20 @@ I created a parser that reads multiple folders of ABC files which in turn identi
 Running full_program.py opens the menu based interface while running gui.py launches the graphical application. Both connect to the same database and analysis functions. Great consistency.
 
 # How it works:
+## Parser:
+- I scan the entrie abc_books folder and look inside each numbered subfolder
+- Every .abc file is read line by line to identify tune selections by markers like X: T: R: K:
+- I store each tunes as a dictionary containing all of its metadata and its body text
+- The parser supports files that hold multiiple tunes in one file
+## Database:
 
+## Pandas Data Analysis:
+
+## Tkinter:
+
+## CLI Menu:
+
+## GUI Header:
 
 # Screenshots
 
