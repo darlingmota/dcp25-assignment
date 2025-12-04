@@ -21,21 +21,18 @@ Lecturer: Dr. Bryan Duggan
 | tunes.db | SQLite database |
 | README.md | Project documentation |
 | .gitignore | Ignore |
-| LICENSE | Permissions |
+| LICENSE | Permissions by Darling Mota (c)|
 
 # Description of the project
 
-I wrote a parser that reads multiple folders of ABC files which in turn identifies each tune inside them and uses that information to insert every tune into a database for analysis.
+I created a parser that reads multiple folders of ABC files which in turn identifies each tune inside them and uses that information to insert every tune into a database for analysis.
 
 # Instructions for use
 
 Running full_program.py opens the menu based interface while running gui.py launches the graphical application. Both connect to the same database and analysis functions. Great consistency.
 
 # How it works:
-Extracting tune metadata line by line and store the result in a dictionary.
-When tunes are identified they get inserted into a database with the book number. The program loads the sotred data into Pandas for analysis.
 
-The GUI is a layer on top of the system to perform search and plot data. 
 
 # Screenshots
 
