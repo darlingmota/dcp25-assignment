@@ -117,10 +117,68 @@ def load_all_tunes(conn):
         total += len(tunes)
     print("loaded", total, "tunes into the database")
 
+def load_dataframe(conn):
+    df = pd.read_sql("select * from tunes", conn)
+    return df
+
+def get_tunes_by_book(df, book_number):
+    return df[df["book_number"] == book_number]
+
+def get_tunes_by_type(df, tune_type):
+    return df[df["tune_type"].str.lower() == tune_type.lower()]
+
+def search_tunes(df, term):
+    return df[df["title"].str.contains(term, case=False, na=False)]
+
 def main():
     conn = get_connection()
     create_table(conn)
+
+    print("loading tunes...")
     load_all_tunes(conn)
+
+    df = load_dataframe(conn)
+
+    while True:
+        print()
+        print("=== abc tunes explorer ===")
+        print("1) show number of tunes loaded")
+        print("2) list tunes by book")
+        print("3) list tunes by type")
+        print("4) search tunes by title")
+        print("5) show first 5 rows")
+        print("0) quit")
+        print()
+
+        choice = input("enter choice: ")
+
+        if choice == "1":
+            print("total tunes:", len(df))
+
+        elif choice == "2":
+            book = int(input("book number: "))
+            result = get_tunes_by_book(df, book)
+            print(result)
+
+        elif choice == "3":
+            t = input("tune type: ")
+            result = get_tunes_by_type(df, t)
+            print(result)
+
+        elif choice == "4":
+            term = input("search term: ")
+            result = search_tunes(df, term)
+            print(result)
+
+        elif choice == "5":
+            print(df.head())
+
+        elif choice == "0":
+            print("goodbye")
+            break
+
+        else:
+            print("invalid choice")
 
 if __name__ == "__main__":
     main()
