@@ -35,7 +35,6 @@ For those reading, I created a parser that reads multiple folders of ABC files w
 
 # Instructions for use
 
-Running full_program.py opens the menu based interface while running gui.py launches the graphical application. Both connect to the same database and analysis functions. Great consistency.
 
 # How it works:
 ## Parser:
@@ -53,7 +52,6 @@ Running full_program.py opens the menu based interface while running gui.py laun
 
 ## GUI Header:
 
-# Screenshots
 
 
 
