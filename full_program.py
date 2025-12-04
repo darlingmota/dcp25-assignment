@@ -72,5 +72,7 @@ def parse_abc_file(path, book_number, file_name):
                     "ref_number": text[2:].strip(),
                     "title": "",
                     "tune_type": "",
+                    "meter": "",
+                    "key": "",
 if __name__ == "__main__":
     main()
