@@ -32,3 +32,27 @@ TEXT = "#EAEAEA"
 FONT = ("Inter", 11)
 FONT_BOLD = ("Inter", 12, "bold")
 TITLE_FONT = ("Inter", 22, "bold")
+
+def modern_button(parent, text, command):
+    style = ttk.Style()
+    style.theme_use("clam")
+    style.configure(
+        "Dark.TButton",
+        background="#000000",
+        foreground="white",
+        borderwidth=0,
+        focusthickness=0,
+        focuscolor=parent["bg"],
+        padding=6
+    )
+    style.map(
+        "Dark.TButton",
+        background=[("active", "#000000")],
+        foreground=[("active", "white")]
+    )
+    return ttk.Button(
+        parent,
+        text=text,
+        command=command,
+        style="Dark.TButton"
+    )
