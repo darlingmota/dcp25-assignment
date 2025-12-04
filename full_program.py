@@ -89,6 +89,7 @@ def parse_abc_file(path, book_number, file_name):
                 else:
                     body_lines.append(line.rstrip("\n"))
 
+    if current:
 
 if __name__ == "__main__":
     main()
