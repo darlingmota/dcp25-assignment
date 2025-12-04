@@ -43,12 +43,6 @@ def find_abc_files(root="abc_books"):
                         "file_name": f
                     })
     return files
-def main():
-    conn = get_connection()
-    create_table(conn)
-
-    abc_files = find_abc_files()
-    print("found", len(abc_files), "abc files")
 
 def parse_abc_file(path, book_number, file_name):
     tunes = []
@@ -94,15 +88,39 @@ def parse_abc_file(path, book_number, file_name):
         tunes.append(current)
     return tunes
 
+def insert_tune(conn, tune):
+    cur = conn.cursor()
+    cur.execute("""
+        insert into tunes (book_number, file_name, ref_number, title,
+                           tune_type, meter, key, abc_text)
+        values (?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        tune["book_number"],
+        tune["file_name"],
+        tune["ref_number"],
+        tune["title"],
+        tune["tune_type"],
+        tune["meter"],
+        tune["key"],
+        tune["abc_text"]
+    ))
+    conn.commit()
+
+def load_all_tunes(conn):
+    clear_table(conn)
+    abc_files = find_abc_files()
+    total = 0
+    for item in abc_files:
+        tunes = parse_abc_file(item["path"], item["book"], item["file_name"])
+        for t in tunes:
+            insert_tune(conn, t)
+        total += len(tunes)
+    print("loaded", total, "tunes into the database")
+
 def main():
     conn = get_connection()
     create_table(conn)
-
-    abc_files = find_abc_files()
-
-    for item in abc_files:
-        tunes = parse_abc_file(item["path"], item["book"], item["file_name"])
-        print(item["file_name"], "→", len(tunes), "tunes parsed")
+    load_all_tunes(conn)
 
 if __name__ == "__main__":
     main()
