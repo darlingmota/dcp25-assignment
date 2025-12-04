@@ -67,5 +67,7 @@ def parse_abc_file(path, book_number, file_name):
 
                 
                 current = {
+                    "book_number": book_number,
+                    "file_name": file_name,
 if __name__ == "__main__":
     main()
