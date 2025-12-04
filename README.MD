@@ -8,6 +8,13 @@
 - Module: Data Centric Programming
 
 Lecturered by Dr. Bryan Duggan, Computer Scientist
+**Lecturered by** *Dr. Bryan Duggan, Computer Scientist*
+
+# Screenshots
+![GUI Screenshot](images/Screenshot%202025-12-04%20at%2013.53.07.png)
+![Chart Screenshot](images/Screenshot%202025-12-04%20at%2017.04.46.png)
+
+
 
 # List of files in the project
 
@@ -25,7 +32,7 @@ Lecturered by Dr. Bryan Duggan, Computer Scientist
 
 # Description of the project
 
-I created a parser that reads multiple folders of ABC files which in turn identifies each tune inside them and uses that information to insert every tune into a database for analysis.
+For those reading, I created a parser that reads multiple folders of ABC files which in turn identifies each tune inside them and uses that information to insert every tune into a database for analysis.
 
 # Instructions for use
 
