@@ -1,17 +1,16 @@
 # Data Centric Programming Assignment 2025
 
-- [Assignment Brief](assignment.md)
 
 Name: Darling Mota
-
 Student Number: C24486262
+Module: Data Centric Programming
 
 # List of files in the project
 
 | File / Folder | Source / Description |
 |---------------|----------------------|
 | full_program.py | Self written backend |
-| gui.py | Self-written |
+| gui.py | Self written |
 | assignment.md | Assignment brief |
 | abc_books/ | Files provided in assignment |
 | images/headerImage.png | GUI header image |
