@@ -64,5 +64,3 @@ Running full_program.py opens the menu based interface while running gui.py laun
 * Item 2
 
 
-|Some stuff | Some more stuff in this column |
-
