@@ -91,8 +91,7 @@ This assignment taiught me how to parse real world text formats and work with ma
 * **Duggan, B. (2025)** *Tkinter GUI Programming: A Comprehensive Guide to Python's built-in GUI Library. Available at: [Tkinter Slides By Dr. Bryan Duggan](https://github.com/skooter500/dcp25/blob/main/week4/tkinter_slides.pdf)* **TU Dublin**
 * **Hunter, J.D. et al. (2025)** *Matplotlib: Visualization with Python. Available at: [Tutorials](https://matplotlib.org/stable/tutorials/images.html#sphx-glr-tutorials-images-py)*
 * **Duggan, B. (2025)** *Introduction to Matplotlib: Data Visualization. Available at: [Matplotlib Slides By Dr. Bryan Duggan](https://github.com/skooter500/dcp25/blob/main/week4/tkinter_slides.pdf)* **TU Dublin**
-* 
-* 
-* 
+* **Walshaw, C. (2025)** **ABC Notation Standard Version 2.1*. Available at: [ABC Notation Standard v2.1](https://abcnotation.com/wiki/abc:standard:v2.1) (Accessed: 24 November 2025).*
+* Python Software Foundation (2025) *sqlite3 — DB-API 2.0 interface for SQLite databases*. Available at: [Python sqlite3 Documentation](https://docs.python.org/3/library/sqlite3.html).
 
 
