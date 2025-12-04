@@ -1,4 +1,4 @@
-# Data Centric Programming Assignment 2025
+# Music Analysis, GUI Application & Database Processing Project 2025
 
 
 Name: Darling Mota
@@ -6,6 +6,8 @@ Name: Darling Mota
 Student Number: C24486262
 
 Module: Data Centric Programming
+
+Lecturer: Dr. Bryan Duggan
 
 # List of files in the project
 
