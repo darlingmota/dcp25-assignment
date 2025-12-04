@@ -11,7 +11,8 @@ Student Number: C24486262
 I wrote a parser that reads multiple folders of ABC files which in turn identifies each tune inside them and uses that information to insert every tune into a database for analysis.
 
 # Screenshots
-![](images/Screenshot 2025-12-04 at 13.53.07.png)
+![](images/Screenshot 2025-12-04 13.53.07.png)
+
 
 
 # Instructions for use
