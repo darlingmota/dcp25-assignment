@@ -77,7 +77,6 @@ def parse_abc_file(path, book_number, file_name):
                     "abc_text": ""
                 }
                 body_lines = []
-            elif currnener:
             elif current:
                 if text.startswith("T:"):
                     current["title"] = text[2:].strip()
