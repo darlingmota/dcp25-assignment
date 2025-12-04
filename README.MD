@@ -7,7 +7,7 @@
 
 - Module: Data Centric Programming
 
-Lecturer: Dr. Bryan Duggan
+Lecturer: Dr. Bryan Duggan, Computer Scientist
 
 # List of files in the project
 
