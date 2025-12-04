@@ -88,7 +88,7 @@ This assignment taiught me how to parse real world text formats and work with ma
 
 
 # References
-* **Duggan, B. (2025)** *Tkinker Slides*
+* **Duggan, B. (2025)** *Tkinter GUI Programming: A Comprehensive Guide to Python's built-in GUI Library. TU Dublin*
 * 
 * 
 * 
