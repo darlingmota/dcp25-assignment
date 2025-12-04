@@ -79,6 +79,16 @@ def parse_abc_file(path, book_number, file_name):
                 body_lines = []
             elif currnener:
             elif current:
+                if text.startswith("T:"):
+                    current["title"] = text[2:].strip()
+                elif text.startswith("R:"):
+                    current["tune_type"] = text[2:].strip()
+                elif text.startswith("M:"):
+                    current["meter"] = text[2:].strip()
+                elif text.startswith("K:"):
+                    current["key"] = text[2:].strip()
+                else:
+                    body_lines.append(line.rstrip("\n"))
 
 
 if __name__ == "__main__":
