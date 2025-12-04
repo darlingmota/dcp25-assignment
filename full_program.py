@@ -61,6 +61,8 @@ def parse_abc_file(path, book_number, file_name):
             
             if text.startswith("X:"):
                 
+                if current:
+                    current["abc_text"] = "\n".join(body_lines)
 
 if __name__ == "__main__":
     main()
