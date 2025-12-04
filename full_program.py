@@ -1,6 +1,7 @@
 import os
 import sqlite3
 import pandas as pd
+import matplotlib.pyplot as plt
 
 def get_connection(db_path="tunes.db"):
     return sqlite3.connect(db_path)
@@ -130,6 +131,52 @@ def get_tunes_by_type(df, tune_type):
 def search_tunes(df, term):
     return df[df["title"].str.contains(term, case=False, na=False)]
 
+
+def count_tunes_per_book(df):
+    """Return number of tunes in each book."""
+    return df.groupby("book_number")["id"].count()
+
+def most_common_tune_types(df, n=10):
+    """Return the most frequent tune types."""
+    return df["tune_type"].value_counts().head(n)
+
+def most_common_keys(df):
+    """Return frequency of key signatures."""
+    return df["key"].value_counts()
+
+def average_tune_length(df):
+    """Estimate tune length by counting bar symbols in abc_text."""
+    return df["abc_text"].apply(lambda x: x.count("|")).mean()
+
+def tunes_by_meter(df):
+    """Return counts for each meter."""
+    return df["meter"].value_counts()
+
+def tunes_per_file(df):
+    """Return number of tunes contained in each ABC file."""
+    return df.groupby("file_name")["id"].count()
+def plot_tunes_per_book(df):
+    """Display a bar chart showing number of tunes per book."""
+    counts = df.groupby("book_number")["id"].count()
+    plt.figure(figsize=(8,5))
+    counts.plot(kind="bar", color="#4A90E2")
+    plt.title("Number of Tunes per Book")
+    plt.xlabel("Book Number")
+    plt.ylabel("Tune Count")
+    plt.tight_layout()
+    plt.show()
+
+def plot_most_common_keys(df, n=10):
+    """Display a bar chart showing the most common key signatures."""
+    counts = df["key"].value_counts().head(n)
+    plt.figure(figsize=(8,5))
+    counts.plot(kind="bar", color="#7E57C2")
+    plt.title("Most Common Key Signatures")
+    plt.xlabel("Key")
+    plt.ylabel("Frequency")
+    plt.tight_layout()
+    plt.show()
+
 def main():
     conn = get_connection()
     create_table(conn)
@@ -147,6 +194,11 @@ def main():
         print("3) list tunes by type")
         print("4) search tunes by title")
         print("5) show first 5 rows")
+        print("6) count tunes per book")
+        print("7) most common tune types")
+        print("8) most common key signatures")
+        print("9) plot tunes per book")
+        print("10) plot most common keys")
         print("0) quit")
         print()
 
@@ -172,6 +224,21 @@ def main():
 
         elif choice == "5":
             print(df.head())
+
+        elif choice == "6":
+            print(count_tunes_per_book(df))
+
+        elif choice == "7":
+            print(most_common_tune_types(df))
+
+        elif choice == "8":
+            print(most_common_keys(df))
+
+        elif choice == "9":
+            plot_tunes_per_book(df)
+
+        elif choice == "10":
+            plot_most_common_keys(df)
 
         elif choice == "0":
             print("goodbye")
