@@ -6,14 +6,20 @@ Name: Darling Mota
 
 Student Number: C24486262
 
+# List of files in the project
+| Files | Source |
+|-----------|-----------|
+| full_prograam.py | Self written |
+| gui.py | Modified from [reference]() |
+| test.py | From [reference]() |
+
 # Description of the project
 
 I wrote a parser that reads multiple folders of ABC files which in turn identifies each tune inside them and uses that information to insert every tune into a database for analysis.
 
-# Screenshots
-
-
 # Instructions for use
+
+Running full_program.py opens the menu based interface while running gui.py launches the graphical application. Both connect to the same database and analysis functions. Great consistency.
 
 # How it works:
 Extracting tune metadata line by line and store the result in a dictionary.
@@ -21,13 +27,11 @@ When tunes are identified they get inserted into a database with the book number
 
 The GUI is a layer on top of the system to perform search and plot data. 
 
-# List of files in the project
+# Screenshots
 
-| Files | Source |
-|-----------|-----------|
-| full_prograam.py | Self written |
-| gui.py | Modified from [reference]() |
-| test.py | From [reference]() |
+
+
+
 
 # References
 * Item 1
