@@ -6,22 +6,24 @@ import matplotlib.pyplot as plt  # imports matplotlib for plotting graphs/charts
 def get_connection(db_path="tunes.db"):  # defines function to get database connection
     return sqlite3.connect(db_path)  # opens a connection to the sqlite database
 
-def create_table(conn):  # defines function to create the tunes table
-    cur = conn.cursor()  # creates a cursor for executing sql commands
-    cur.execute("""  # creates the tunes table if it does not exist
-        create table if not exists tunes (
-            id integer primary key autoincrement,
-            book_number integer,
-            file_name text,
-            ref_number text,
-            title text,
-            tune_type text,
-            meter text,
-            key text,
-            abc_text text
-        )
-    """)
-    conn.commit()  # saves the changes to the database
+def create_table(conn):
+    cur = conn.cursor()  # creates cursor for executing sql
+
+    # creates the tunes table if it does not exist
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS tunes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            book_number INTEGER,
+            file_name TEXT,
+            ref_number INTEGER,
+            title TEXT,
+            tune_type TEXT,
+            meter TEXT,
+            key TEXT
+        );
+    """)  # ends sql command
+
+    conn.commit()  # saves changes
 
 def clear_table(conn):  # defines function to clear all tunes from the table
     cur = conn.cursor()  # creates cursor
@@ -90,7 +92,7 @@ def parse_abc_file(path, book_number, file_name):  # defines function to parse a
 
 def insert_tune(conn, tune):  # defines function to insert a tune into database
     cur = conn.cursor()  # creates cursor
-    cur.execute("""  # inserts tune data into tunes table
+    cur.execute("""
         insert into tunes (book_number, file_name, ref_number, title,
                            tune_type, meter, key, abc_text)
         values (?, ?, ?, ?, ?, ?, ?, ?)
